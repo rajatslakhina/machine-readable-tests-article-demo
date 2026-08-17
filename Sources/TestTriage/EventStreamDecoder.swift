@@ -51,7 +51,7 @@ public struct EventStreamDecoder: Sendable {
     }
 
     /// Decodes a single line into the running result.
-    private func decode(line: String, into: result: inout DecodeResult) {
+    private func decode(line: String, into result: inout DecodeResult) {
         guard let data = line.data(using: .utf8) else {
             result.malformedLineCount += 1
             return
