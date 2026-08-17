@@ -1,6 +1,6 @@
 # TestTriage
 
-**A triage layer over Swift Testing's machine-readable surface.** This repo is the companion demo for the article *"Your Test Suite's Primary Reader Is Now an Agent"* — Article: (added after publish).
+**A triage layer over Swift Testing's machine-readable surface.** This repo is the companion demo for the article [*Your Test Suite's Primary Reader Is Now an Agent*](https://medium.com/@er.rajatlakhina/your-test-suites-primary-reader-is-now-an-agent-4b1c68c52038).
 
 Swift Testing now speaks two machine-facing dialects: the **ABI event stream** (`--event-stream-output-path`, a JSON Lines feed of every test record and event) and **ST-0025 tag-based execution filtering** (`swift test --skip tag:uiTest`). `TestTriage` closes the loop between them: it decodes the stream, reconstructs per-test verdicts, and emits the *next command* — the exact `swift test` invocation that re-runs only what failed.
 
